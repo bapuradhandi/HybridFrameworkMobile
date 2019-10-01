@@ -1,0 +1,10 @@
+stages:
+  - build
+
+jarGeneration:
+  stage: build
+  script:
+    - mvn clean compile assembly:single
+  artifacts:
+    paths:
+      - target/*.jar
